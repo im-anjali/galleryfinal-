@@ -1,0 +1,411 @@
+body {
+  background-color: black;
+  /* min-height: 100vh; */
+  margin: 0;
+  /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+  margin: 0;
+  padding: 0;
+  color: white;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* .main {
+  position: relative;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media(max-width:1016){
+  .main{
+    margin-top:-10px;
+  }
+} */
+.main {
+  position: relative;
+  margin-top: 20px; /* Reduced margin-top to decrease gap */
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Ensure it uses full width */
+}
+
+@media (max-width: 1016px) {
+  .main {
+    margin-top: 0px; /* Adjust margin-top for smaller screens */
+  }
+}
+
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-top: 50px; /* Adjust margin-top to reduce gap between main and gallery */
+  transition: box-shadow 0.5s ease-out;
+  color: aliceblue;
+}
+
+@media (max-width: 650px) {
+  .logo1 {
+    margin-top: 50px; /* Adjust margin-top for smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .logo1 {
+    margin-top: 20px; /* Further adjustment for very small screens */
+  }
+}
+
+
+@media  (max-width: 587px) {
+  .asom{
+   font-size: 3rem;
+  }
+ }
+.slider {
+  position: relative;
+  width: 80vw; /* Adjust as needed for responsiveness */
+  /* max-width: 800px; */
+  height: 470px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#vanta-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.item1 {
+  position: absolute;
+  width: 50%; 
+  height: 50%;
+  text-align: justify;
+  border-radius: 10px;
+  /* background-color: rgb(15, 15, 33); */
+  padding: 3px;
+  box-sizing: border-box; /* Include padding and border in width and height */
+  transition: transform 0.5s ease; /* Smooth transition */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 300px; */
+}
+.item1 img {
+  max-width: 100%; /* Make the image span the full width of the card */
+  /* height: 100%; Make the image span the full height of the card */
+  object-fit: contain; /* Cover the card area while maintaining aspect ratio */
+  display: block; /* Remove any extra space below the image */
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+  height: 800px; /* Converted from 50rem */
+  width: 1280px; /* Converted from 80rem */
+}
+@media (max-width: 650px) {
+  .item1 {
+    width: 70%; /* Adjust width of .item1 for smaller screens */
+    height: auto; /* Adjust height to auto for better scaling */
+  }
+
+  .item1 img {
+    height: auto; /* Ensure the image maintains aspect ratio */
+    width: 100%; /* Make the image span the full width of the card */
+  }
+}
+@media (max-width: 500px) {
+  .item1 {
+    width: 90%; /* Adjust width of .item1 for smaller screens */
+    height: auto; /* Adjust height to auto for better scaling */
+  }
+
+  .item1 img {
+    height: auto; /* Ensure the image maintains aspect ratio */
+    width: 100%; /* Make the image span the full width of the card */
+  }
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 25%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#next {
+  right: 10px; /* Adjust positioning */
+}
+
+#prev {
+  left: 10px; /* Adjust positioning */
+}
+
+@media (max-width: 768px) {
+
+
+  #next,
+  #prev {
+    font-size: x-large; /* Adjust font size for buttons on smaller screens */
+  }
+}
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  /* max-width: 550px; Restrict max width */
+  /* margin: 50px auto; Center horizontally with margin */
+  margin-top: 170px;
+  transition: box-shadow 0.5s ease-out;
+  color: aliceblue;
+}
+@font-face {
+  font-family: "Azonix";
+  src: url("./NexaRustSans-Trial-Black2.ttf") format("opentype");
+}
+@font-face {
+  font-family: 'nexa';
+  src: url('./NexaRustSans-Trial-Black2.ttf') format('opentype');
+}
+.logo1 img {
+  height: auto; /* Adjust height based on image aspect ratio */
+  max-height: 130px; /* Restrict max height */
+  transition: filter 0.5s ease-out;
+  filter: drop-shadow(
+    5px 3px 5px rgb(91, 113, 236)
+  ); /* More intense glow for the image */
+  margin-top: -70%;
+}
+
+
+.logo1:hover {
+  cursor: pointer;
+  /* Apply glow effect to the container */
+  /* box-shadow: 0 0 10px 5px white; */
+}
+.about {
+  color: aliceblue;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'nexa';
+  text-shadow: 0 0 20px rgba(0, 153, 255, 1), 0 0 30px rgba(0, 153, 255, 0.8),
+    0 0 40px rgba(0, 153, 255, 0.6);
+}
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#vanta-canvas {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Navbar styles */
+
+.checkbox {
+  display: none;
+}
+
+.navbar-icon {
+  height: 3rem;
+  width: 3rem;
+  z-index: 999;
+  display: inline-block;
+}
+
+.msLink {
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  z-index: 10000;
+}
+
+.button {
+  position: relative;
+  background-color: rgba(59, 59, 59, 0.571);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3vh;
+  right: 5vw;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center;
+  cursor: pointer;
+}
+.nav-elements {
+  display: none;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(52, 52, 52, 0.229);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  pointer-events: none;
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.4s;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  padding: 10px;
+}
+
+.item {
+  margin: 8px;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 3px;
+  color: white;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  background-size: 220%;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  -webkit-transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link:not(:hover)::after {
+  width: 0;
+  left: 0;
+}
+
+.checkbox:checked ~ .background {
+  transform: translateX(0);
+}
+.checkbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 1.2rem;
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.icon::before {
+  top: -0.5rem;
+}
+.icon::after {
+  top: 0.5rem;
+}
+
+.button:hover icon:before {
+  top: -0.8rem;
+}
+.button:hover icon::after {
+  top: 0.8rem;
+}
+
+.checkbox:checked + .button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked + .button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.checkbox:checked + .button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.checkbox:checked body {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 680px) {
+  .nav-elements {
+    display: flex !important;
+  }
+}
+
+/* Navbar styles end here */

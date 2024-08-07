@@ -185,13 +185,56 @@ body {
   /* box-shadow: 0 0 10px 5px white; */
 }
 .about {
-  color: aliceblue;
+  color: white;
   font-size: 2rem;
   text-align: center;
-  font-family: 'nexa';
-  text-shadow: 0 0 10px rgba(0, 153, 255, 1), 0 0 10px rgba(0, 153, 255, 0.8),
-    0 0 10px rgba(0, 153, 255, 0.6);
+  /* font-family: 'nexa'; */
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 10px rgba(0, 153, 255, 1), 
+               0 0 10px rgba(0, 153, 255, 0.8),
+               0 0 10px rgba(0, 153, 255, 0.6);
 }
+
+.text-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards, filling 5s ease-in forwards;
+  font-size: 80px;
+}
+
+.text-line text {
+  fill: #fff; /* Default text color */
+  stroke: white; /* Default stroke color (blue border) */
+  stroke-width: 2; /* Border width */
+  font-weight: 600;
+  font-style: normal;
+  transition: fill 0.5s ease, stroke 0.5s ease; /* Smooth transition for color change */
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes filling {
+  0%, 90% { 
+    fill: #3640c7; /* Initial color (blue) */
+    fill-opacity: 0; /* Initial opacity (transparent) */
+  }
+  100% { 
+    fill: #fff; /* Final text color (white) */
+    fill-opacity: 1; /* Final opacity (opaque) */
+  }
+}
+
+/* Ensures final state has white text with blue border */
+.text-line text.final {
+  fill: #fff; /* White text color */
+  stroke: #3640c7; /* Blue border color */
+  stroke-width: 2; /* Border width */
+}
+
 
 /* Custom */
 
